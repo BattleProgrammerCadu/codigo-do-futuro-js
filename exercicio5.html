@@ -1,0 +1,40 @@
+<script>
+    nome = prompt("digite seu nome");
+    orcamento = parseInt(prompt("digite seu orçamento para viagem"));
+    local = prompt(`Informe o local desejado:
+    Locais disponiveis:
+    Disney 
+    Madrid 
+    Maceio 
+    Ribeirão preto `);
+    if(local == 'Disney' && orcamento>=15000){
+        alert(`Parabens, ${nome}! Você pode viajar para ${local}`)
+    }
+    else if(local == 'Madrid' && orcamento>=12000){
+        alert(`Parabens, ${nome}! Você pode viajar para ${local}`)
+    }else if(local == 'Maceio' && orcamento>=8000){
+        alert(`Parabens, ${nome}! Você pode viajar para ${local}`)
+    }else if(local == 'Ribeirao preto' && orcamento>=5000){
+        alert(`Parabens, ${nome}! Você pode viajar para ${local}`)
+    }
+    else if(local == 'Disney' && !(orcamento>=15000)){
+        economia = 5000 - orcamento
+        alert(`${nome}! Para viajar para ${local} você precisa economizar R$ ${economia}`)
+    }
+    else if(local == 'Madrid' && !(orcamento>=12000)){
+        economia = 5000 - orcamento
+        alert(`${nome}! Para viajar para ${local} você precisa economizar R$ ${economia}`)
+    }
+    else if(local == 'Maceio' && !(orcamento>=8000)){
+        economia = 5000 - orcamento
+        alert(`${nome}! Para viajar para ${local} você precisa economizar R$ ${economia}`)
+    }
+    else if(local == 'Ribeirao preto' && !(orcamento>=5000)){
+        economia = 5000 - orcamento
+        alert(`${nome}! Para viajar para ${local} você precisa economizar R$ ${economia}`)
+    }
+    else{
+        alert('Local invalido');
+    }
+</script>
+
