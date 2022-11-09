@@ -1,0 +1,54 @@
+<script>
+ var listaAlunos = [];
+do{
+    var sdasd=true
+    let escolha = prompt(`Olá, qual operação gostaria de realizar?
+    1-Cadastrar aluno
+    2-Listar Alunos
+    3-Sair`);
+    switch(escolha){
+        case "1":
+            cadastrar();
+            break;
+        case "2": 
+            listar();
+            break;
+        case "3":
+            sdasd=false;
+            break
+        default:
+            alert('Opção invalida')
+    }
+}while(sdasd);
+
+function cadastrar(){
+    let nome = prompt('Digite o nome do aluno');
+    let matricula = prompt(`Digite a matricula do aluno ${nome}`);
+    let quantidadeNotas = parseInt(prompt('Informe a quantidade de notas'));
+    let notas = [];
+    let media = 0;
+    for(let i=0; i<quantidadeNotas; i++){
+        notas.push(Number(prompt(`Informe a ${(i+1)} nota do ${nome}`)));
+        media+=notas[i];
+    }
+    media = media / quantidadeNotas;
+    if(media>=7){
+        situacao = 'Aprovado'
+    }else if(media >=5){
+        situacao = 'Recuperacao'
+    }else{
+        situacao = 'Reprovado'
+    }
+    listaAlunos.push({"nome": nome,"matricula": matricula, "notas": notas, "situacao": situacao});
+}
+
+function listar(){
+   if(listaAlunos.length<1) alert('Ainda não há alunos cadastrados')
+   for(i=0; i<listaAlunos.length;i++){
+        alert(`Aluno: ${listaAlunos[i].nome}
+Matricula: ${listaAlunos[i].matricula}
+Notas: ${listaAlunos[i].notas}
+Situação: ${listaAlunos[i].situacao}`)
+   }
+}
+</script>
