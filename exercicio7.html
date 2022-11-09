@@ -14,7 +14,7 @@ do{
             listar();
             break;
         case "3":
-            sdasd=false;
+            isActive=false;
             break
         default:
             alert('Opção invalida')
@@ -39,7 +39,7 @@ function cadastrar(){
     }else{
         situacao = 'Reprovado'
     }
-    listaAlunos.push({"nome": nome,"matricula": matricula, "notas": notas, "situacao": situacao});
+    listaAlunos.push({"nome": nome,"matricula": matricula, "notas": notas, "media":media,  "situacao": situacao});
 }
 
 function listar(){
@@ -48,6 +48,7 @@ function listar(){
         alert(`Aluno: ${listaAlunos[i].nome}
 Matricula: ${listaAlunos[i].matricula}
 Notas: ${listaAlunos[i].notas}
+Media: ${listaAlunos[i].media}
 Situação: ${listaAlunos[i].situacao}`)
    }
 }
